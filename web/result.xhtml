@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <link rel="stylesheet" href="resources/css/a.css"/>
+    <title>Rental</title>
+</h:head>
+<h:body>
+    <div class="body">
+    <div class="boxes">
+        <img class = "car-image2" src="66.jpg" alt=""/>
+        <span class="welcome">
+             Добро пожаловать, #{customerBean.customer.name}
+         </span>
+        <h:form>
+            <h:commandButton styleClass="back-button" action="#{customerBean.back}" value="Назад"/>
+        </h:form>
+    <div>
+        <div>
+            <ui:repeat var="rental" value="#{customerBean.customerCar}">
+                <div>
+                    <h:dataTable var="car"
+                                 value="#{rental.cars}"
+                                 styleClass="main-table table"
+                                 headerClass="main-table__head-row"
+                                 rowClasses="main-table__row">
+                        <h:column>
+                            <f:facet name="header">Модель</f:facet>
+                            #{car.model}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Производитель</f:facet>
+                            #{car.manufacturer}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Стоимость</f:facet>
+                            #{car.amount}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Количество</f:facet>
+                            #{car.cost}
+                        </h:column>
+                    </h:dataTable>
+
+                    <h:form >
+                        <h:commandButton styleClass="insert-button"
+                                         value="Добавить"
+                                         action="#{customerBean.validate}">
+                            <f:setPropertyActionListener target="#{customerBean.id_customer}" value="#{customer.id}" />
+                        </h:commandButton>
+                    </h:form>
+                </div>
+            </ui:repeat>
+        </div>
+    <div>
+        <h:form >
+            <h:commandButton styleClass="xml-button" value="XML"  action="#{customerBean.seeXmlView}"/>
+        </h:form>
+    </div>
+    </div>
+    </div>
+    </div>
+</h:body>
+</html>

@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    background-color: #F8F3E4;
+}
+.boxes{
+    opacity: 0.8;
+    display: flex;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: center;
+}
+.car-image2{
+
+    position: absolute;
+    left: 160px;
+    top: 90px;
+    width: 77%;
+    height: 75%;
+
+}
+.welcome{
+    position	: absolute;
+    top		: 5px;
+    left		: 0;
+    font-family: Century Gothic, serif;
+    padding:  10px  10px;
+    width: 100%;
+    font-size: 50px;
+    color: black;
+    text-align: center;
+}
+table{
+    font-family: Lucida Sans Unicode, Lucida Grande, Sans-Serif, serif;
+    font-size: 14px;
+    background: rgba(255,255,255,0.85);
+    max-width: 70%;
+    width: 70%;
+    border-collapse: collapse;
+    text-align: left;
+    position	: absolute;
+    top		: 150px;
+    left: 210px;
+}
+th{
+    font-weight: normal;
+    color: midnightblue;
+    border-bottom: 2px solid #6678b1;
+    padding: 10px 8px;
+}td {
+     color: blue;
+     padding: 9px 8px;
+     transition: .3s linear;
+
+ }
+tr:hover td {color: #6699ff;}
+.back{
+    position	: absolute;
+    top		: 5px;
+    left		: 0;
+    padding:  10px  10px;
+    width: 100%;
+
+    font-family: Century Gothic, serif;
+    font-size: 25px;
+    color: black;
+    text-align: center;
+}
+.xml-button{
+    position	: absolute;
+    top		: 520px;
+    left		: 800px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat-Bold, serif;
+    text-transform: uppercase;
+    width: 20%;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-out;
+
+    background-color: #0099cc;
+    color: black;
+    border: none;
+}
+.back-button{
+    position	: absolute;
+    top	: 520px;
+    left: 300px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    font-family: Montserrat-Bold, serif;
+    text-transform: uppercase;
+    width: 20%;
+    height: 30px;
+    border-radius: 50px;
+    font-size: 18px;
+    letter-spacing: 3px;
+    transition: all 0.3s ease-out;
+
+    background-color: #0099cc;
+    color: black;
+    border: none;
+}
+.xml-button:hover, .back-button:hover  {
+    background: #333333;
+    color: white;
+}
+a{
+    color: darkblue;
+    text-decoration: underline;
+    text-align: center;
+}
+a:active {
+    color: mediumvioletred;
+}

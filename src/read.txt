@@ -1,0 +1,18 @@
+4 cars at the rental point 9
+Bugatti
+France
+90
+800000
+RangeRover
+England
+19
+1
+Audi-A6
+Germany
+9
+1067700
+Toyota
+Japan
+30
+20000
+

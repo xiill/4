@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xml:lang="en" lang="en">
+<h:head>
+    <link rel="stylesheet" href="resources/css/a.css"/>
+    <title>Rental</title>
+</h:head>
+<h:body>
+    <div class="insert">
+        <h:form styleClass="insert-form">
+            <div class="insert-input-wrapper">
+                <h:outputLabel styleClass="insert-form__label label" for="model">Модель
+                    <h:inputText styleClass="insert-form__input input" id="model" value="#{customerBean.car.model}" validatorMessage="Введите модель машины">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </h:outputLabel>
+                <h:outputLabel styleClass="insert-form__label label" for="manufacturer">Производитель
+                    <h:inputText styleClass="insert-form__input input" id="manufacturer" value="#{customerBean.car.manufacturer}" validatorMessage="Введите производителя машины">
+                        <f:validateRequired/>
+                    </h:inputText>
+                </h:outputLabel>
+                <h:outputLabel styleClass="insert-form__label label" for="amount">Стоимость
+                    <h:inputText styleClass="insert-form__input input" id="amount" value="#{customerBean.car.amount}" validatorMessage="Введите стоимость машины">
+                        <f:validateRequired/>
+                        <f:validateDoubleRange minimum="0.001" maximum="1000000000"/>
+                    </h:inputText>
+                </h:outputLabel>
+                <h:outputLabel styleClass="insert-form__label label" for="cost">Количество
+                    <h:inputText styleClass="insert-form__input input" id="cost" value="#{customerBean.car.cost}" validatorMessage="Введите количестdо машин">
+                        <f:validateRequired/>
+                        <f:validateLongRange minimum="0" maximum="10000000000"/>
+                    </h:inputText>
+                </h:outputLabel>
+            </div>
+            <h:commandButton action="#{customerBean.insertAndGoToResultPage}"
+                             value="Добавить"
+                             styleClass="insert-form__button button"/>
+        </h:form>
+        <h:messages styleClass="insert-error"/>
+    </div>
+</h:body>
+</html>

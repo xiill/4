@@ -1,0 +1,21 @@
+4 cars at the rental point 9
+Model: RangeRover
+Manufacture: England
+Amount: 19
+Cost: 1
+
+Model: Toyota
+Manufacture: Japan
+Amount: 30
+Cost: 20000
+
+Model: Bugatti
+Manufacture: France
+Amount: 90
+Cost: 800000
+
+Model: Audi-A6
+Manufacture: Germany
+Amount: 9
+Cost: 1067700
+
